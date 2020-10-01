@@ -7,17 +7,17 @@ import UploadField from "./UploadField";
 import useAuth from "../../hooks/useAuth";
 
 const stackTokens = {
-  childrenGap: 50,
+    childrenGap: 50,
 };
 
 export default function MainPage() {
-  const { authorized } = useAuth();
+    const { authorized } = useAuth();
 
-  return (
-    <Stack vertical horizontalAlign="center" tokens={stackTokens}>
-      <Navbar />
-      {authorized && <UploadField />}
-      <Memes />
-    </Stack>
-  );
+    return (
+        <Stack vertical horizontalAlign="center" tokens={stackTokens}>
+            <Navbar />
+            {authorized && <UploadField />}
+            <Memes />
+        </Stack>
+    );
 }
